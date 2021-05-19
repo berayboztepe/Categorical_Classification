@@ -56,12 +56,50 @@ I have 5 different classes of flowers. These are:
 
 
 
+# Python Code
+
+  First, activating the environment.
+
+```python
+-conda activate tf-gpu
+```
+Setting the parameters. Class number will be changed due to number of classes in printClasses function.
+```
+CLASS_MODE = 'categorical'
+LOSS_TYPE ='categorical_crossentropy'    
+CLASSES_NUMBER = 0
+IMAGE_SIZE = (224, 224)
+INPUT_SHAPE = (224, 224, 3)
+TRAIN_BATCH_SIZE = 8
+VAL_BATCH_SIZE = 8
+TRAINING_EPOCHS = 50 
+TUNNING_EPOCHS = 50
+ACC = VAL_ACC = LOSS = VAL_LOSS = None
+```
+Optimizitaion function will be the same that I got the best result in the first project.
+
+```python
+model.compile(loss=LOSS_TYPE,
+                  optimizer=optimizers.Adam(lr=LR),
+                  metrics=['acc'])  
+```
+Code for the first architecture, VGG16
+```
+from keras.applications import VGG16
+    baseModel = VGG16(weights='imagenet', include_top=False, input_shape=INPUT_SHAPE)
+```
+When unfreezing the model, 11 top layers will be unfrozen.
+```
+unfreezeModel(baseModel, 11)
+```
+I run the function.
+
+```python
+-python modelBuilding.py
+```
 
 
-
-
-
-
+# Results for VGG16 Model
 
 
 
