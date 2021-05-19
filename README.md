@@ -25,13 +25,9 @@ I have 5 different classes of flowers. These are:
 * Tulip
 
 # Sample Images for Each Class:
-<br>
-![](img/Resim1.jpg)
-<br>
-![](img/Resim2.jpg)
-<br>
-![](img/Resim3.jpg)
-<br>
-![](img/Resim4.jpg)
-<br>
-![](img/Resim5.jpg)
+![Resim1](https://user-images.githubusercontent.com/44292203/118888369-db458300-b8fb-11eb-922a-d7dd6af0b135.jpg)
+![Resim2](https://user-images.githubusercontent.com/44292203/118888376-de407380-b8fb-11eb-9e6f-00bffa2ba1b2.jpg)
+![Resim3](https://user-images.githubusercontent.com/44292203/118888382-e00a3700-b8fb-11eb-8691-dfb66f288ca3.jpg)
+![Resim4](https://user-images.githubusercontent.com/44292203/118888383-e00a3700-b8fb-11eb-931e-58a6eb313433.jpg)
+![Resim5](https://user-images.githubusercontent.com/44292203/118888384-e0a2cd80-b8fb-11eb-89db-a9954609eb1f.jpg)
+
