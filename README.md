@@ -144,7 +144,7 @@ And let us see the accuracy and loss for testing.
 ![total loss and acc](https://user-images.githubusercontent.com/44292203/118889936-2b254980-b8fe-11eb-8d99-6a2dea970165.PNG)
 
 
-So, the accuracy is 0.87. It is not that bad for multiclass classification. But the loss is a bit much. Let us try if we can decrease the loss and improve the model for better classification. First, last epochs of rerun model.
+**So, the accuracy is 0.87. It is not that bad for multiclass classification. But the loss is a bit much. Let us try if we can decrease the loss and improve the model for better classification. First, last epochs of rerun model.**
 
 
 ![last 5 epochs](https://user-images.githubusercontent.com/44292203/118889979-3a0bfc00-b8fe-11eb-93f6-532886478063.PNG)
@@ -170,5 +170,85 @@ Finally, total loss and total accuracy for testing.
 
 **So, the accuracy decreased a bit, but it is not necessary. Difference is not significantlyfor accuracy. But when we check the loss, the loss improved with decreasing by almost %16.**
 
-# Results for MobileNetV2 Model:
+# Results for MobileNetV2 Model
+
+Now, I have changed the model function to use MobileNetV2 architecture and count of top layers to be unfrozen. Comparing with VGG16 model, this model took less time.
+
+
+![model](https://user-images.githubusercontent.com/44292203/118891847-44c79080-b900-11eb-9d1e-49a932bfdaef.PNG)
+
+
+135 top layers will be unfrozen.
+
+
+![layer count](https://user-images.githubusercontent.com/44292203/118891873-4ee98f00-b900-11eb-8b4f-8e81dc0803db.PNG)
+
+
+I began to train the model. This is the first value of validation loss and validation accuracy at the beginning. Comparing with others, this model has the highest validation accuracy and the lowest validation loss at the beginning.
+
+
+![first epoch](https://user-images.githubusercontent.com/44292203/118891977-7b9da680-b900-11eb-8c68-bb9eac830c8f.PNG)
+
+
+These are the last 5 epochs for training the model. 
+
+
+![last 5 for tra](https://user-images.githubusercontent.com/44292203/118892027-8ce6b300-b900-11eb-9027-17db760efae5.PNG)
+
+
+These are the last 5 epochs for tuning.
+
+
+![last 5 for tun](https://user-images.githubusercontent.com/44292203/118892040-93752a80-b900-11eb-9b66-b2f40cb29107.PNG)
+
+
+Accuracy and loss figures.
+
+
+![acc figure](https://user-images.githubusercontent.com/44292203/118892059-9bcd6580-b900-11eb-8bc5-dcd9e5a554c0.PNG)
+
+
+![loss figure](https://user-images.githubusercontent.com/44292203/118892072-9f60ec80-b900-11eb-9cf0-c77af34b2168.PNG)
+
+
+I see the lowest epoch at 72. epoch. But after I rerun the model with 72 epochs, I got worse result than I got at the beginning. I rerun the model with at least 6 different epoch numbers, and I got the best result with 69 epochs. But the result is not good enough. These are the confusion matrix and total accuracy and loss for testing.
+
+
+![conf mat](https://user-images.githubusercontent.com/44292203/118892135-bb648e00-b900-11eb-9dac-ebf805c65b73.PNG)
+
+
+Prediction for rose and daisy is not good enough. Machine predicted 24 roses as tulips, 20 daisies as dandelions. But the prediction for dandelion is very good.
+
+
+![total test](https://user-images.githubusercontent.com/44292203/118892173-c9b2aa00-b900-11eb-8d7d-538a4a8a2dba.PNG)
+
+
+**I got the accuracy as 0.86 and loss as 0.45. Comparing with VGG16, accuracy decreased a little, but I have a good improvement for loss. Let us compare the results with 69 epochs model. First, last 5 epochs for tuning.**
+
+
+![last 5 for tuning](https://user-images.githubusercontent.com/44292203/118892237-dfc06a80-b900-11eb-9583-d6f34d2719a5.PNG)
+
+
+The loss figure.
+
+
+![loss figure](https://user-images.githubusercontent.com/44292203/118892256-e818a580-b900-11eb-9756-d3ab750a669d.PNG)
+
+
+Now confusion matrix and total accuracy and total loss for testing.
+
+
+![conf](https://user-images.githubusercontent.com/44292203/118892278-f1a20d80-b900-11eb-9fdb-b46c11870a2c.PNG)
+
+
+Prediction of tulip has been improved but prediction daisy is still bad. Prediction of dandelion has decreased a little and prediction of rose and sunflower has increased.
+
+
+![total](https://user-images.githubusercontent.com/44292203/118892286-f49cfe00-b900-11eb-8eb0-f9f498c25d15.PNG)
+
+
+**Accuracy has decreased a little, but the loss has improved as about %5. This is what I could get the most improvement.**
+
+
+# Results for ResNet50 Model
 
