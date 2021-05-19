@@ -17,6 +17,13 @@
 
   There are 600 images for each class. Total size is 150 MB. Images are colourful images which all are representing RGB. There is total 1200 images for training (240 for each class). Also, there are 800 images for test and validation both (180 for each class).
   
+
+![Resim6](https://user-images.githubusercontent.com/44292203/118888863-88200000-b8fc-11eb-8052-22726ef31f3c.png)
+
+
+![Resim7](https://user-images.githubusercontent.com/44292203/118888872-8c4c1d80-b8fc-11eb-9c36-7da002cf4a37.png)
+
+
 I have 5 different classes of flowers. These are:
 * Daisy
 
