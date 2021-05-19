@@ -176,7 +176,7 @@ Finally, total loss and total accuracy for testing.
 ![total acc and loss](https://user-images.githubusercontent.com/44292203/118890103-66c01380-b8fe-11eb-91dc-ed736e6c7824.PNG)
 
 
-**So, the accuracy decreased a bit, but it is not necessary. Difference is not significantlyfor accuracy. But when we check the loss, the loss improved with decreasing by almost %16.**
+**So, the accuracy decreased a bit, but it is not necessary. Difference is not significantly for accuracy. But when we check the loss, the loss improved with decreasing by almost %16.**
 
 # Results for MobileNetV2 Model
 
@@ -272,7 +272,7 @@ I have changed the model function in the code and number of top layers to be unf
 ![unfrozen count](https://user-images.githubusercontent.com/44292203/118892627-7b51db00-b901-11eb-908e-16ad0fdd52df.PNG)
 
 
-I began training the model. This is the value of validation loss and validation accuracyat the beginning.
+I began training the model. This is the value of validation loss and validation accuracy at the beginning.
 
 
 ![first epochs](https://user-images.githubusercontent.com/44292203/118892720-9cb2c700-b901-11eb-980d-84ecae3877f9.PNG)
@@ -339,8 +339,7 @@ And now, total loss and accuracy for testing.
 
 # Result Analysis and Summary
 
-I have 3 different architectures and 6 different model with Adam optimizer and 
-different epoch numbers.
+I have 3 different architectures and 6 different model with Adam optimizer and different epoch numbers.
 
 
 1-) VGG16 Model with 100 epochs approximately:
