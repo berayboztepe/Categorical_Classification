@@ -327,8 +327,47 @@ And now, total loss and accuracy for testing.
 ![total test and acc](https://user-images.githubusercontent.com/44292203/118893062-22cf0d80-b902-11eb-9b51-0f6440eaf2cf.PNG)
 
 
-So, I managed to decrease the loss by almost %30. There is not a big loss for accuracy. So, I managed to improve my model.
+**So, I managed to decrease the loss by almost %30. There is not a big loss for accuracy. So, I managed to improve my model.**
 
 # Result Analysis and Summary
+
+I have 3 different architectures and 6 different model with Adam optimizer and 
+different epoch numbers.
+1-) VGG16 Model with 100 epochs approximately:
+
+* Accuracy: 0.87
+* Loss: 0.64
+
+
+2-) VGG16 Model with 86 epochs approximately:
+
+* Accuracy: 0.87
+* Loss: 0.54
+
+
+3-) MobileNetV2 Model with 100 epochs approximately:
+
+* Accuracy: 0.86
+* Loss: 0.45
+
+
+4-) MobileNetV2 Model with 69 epochs approximately:
+
+* Accuracy: 0.85
+* Loss: 0.43
+
+
+5-) ResNet50 Model with 100 epochs approximately:
+
+* Accuracy: 0.88
+* Loss: 0.61
+
+
+6-) ResNet50 Model with 57 epochs approximately:
+
+* Accuracy: 0.86
+* Loss: 0.43
+
+**So, the most effective model from these 3 different architectures and 6 differentmodels is using ResNet50 Model with 57 epochs. I did not get the highest accuracy in this model but comparing with others, the difference is not significantly but the difference between losses is very significantly. MobileNetV2 model with 69 epochs actually very close to ResNet50 Model with 57 epochs but accuracy is distinctions between the two models. This is what I can do best with my GPU.**
 
 
