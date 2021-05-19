@@ -23,3 +23,15 @@ I have 5 different classes of flowers. These are:
 * Rose
 * Sunflower
 * Tulip
+
+# Sample Images for Each Class:
+<br>
+![](img/Resim1.jpg)
+<br>
+![](img/Resim2.jpg)
+<br>
+![](img/Resim3.jpg)
+<br>
+![](img/Resim4.jpg)
+<br>
+![](img/Resim5.jpg)
