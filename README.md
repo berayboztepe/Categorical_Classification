@@ -333,6 +333,8 @@ And now, total loss and accuracy for testing.
 
 I have 3 different architectures and 6 different model with Adam optimizer and 
 different epoch numbers.
+
+
 1-) VGG16 Model with 100 epochs approximately:
 
 * Accuracy: 0.87
