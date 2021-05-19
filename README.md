@@ -373,3 +373,7 @@ different epoch numbers.
 **So, the most effective model from these 3 different architectures and 6 different models is using ResNet50 Model with 57 epochs. I did not get the highest accuracy in this model but comparing with others, the difference is not significantly but the difference between losses is very significantly. MobileNetV2 model with 69 epochs actually very close to ResNet50 Model with 57 epochs but accuracy is distinctions between the two models. This is what I can do best with my GPU.**
 
 
+## To see the .h5 models that I've built and images that I've used
+
+* [Images](img/flowers)
+* [Models](https://drive.google.com/drive/folders/1abpm0u8zIyytIAYbtpKrKE7ATWsAaVCD?usp=sharing)
