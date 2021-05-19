@@ -92,10 +92,10 @@ When unfreezing the model, 11 top layers will be unfrozen.
 ```
 unfreezeModel(baseModel, 11)
 ```
-I run the function.
+I run the code.
 
 ```python
--python modelBuilding.py
+-python modelBuilding_multiclass.py
 ```
 
 
@@ -154,6 +154,14 @@ Now, loss figure.
 
 
 ![loss graph](https://user-images.githubusercontent.com/44292203/118890017-43956400-b8fe-11eb-842d-3955ec54b36c.PNG)
+
+
+Running the testing code.
+
+
+```python
+-python modelTesting_multiclass.py
+```
 
 
 So, let us check the results. First, the confusion matrix. 16 tulips are predicted as rose and 13 dandelions are predicted as daisies. Accuracy of daisy is very bad when we compare with the others.
