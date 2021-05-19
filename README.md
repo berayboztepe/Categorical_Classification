@@ -252,3 +252,83 @@ Prediction of tulip has been improved but prediction daisy is still bad. Predict
 
 # Results for ResNet50 Model
 
+I have changed the model function in the code and number of top layers to be unfrozen.
+
+
+![new model func](https://user-images.githubusercontent.com/44292203/118892619-7856ea80-b901-11eb-935b-e86aa9c7695f.PNG)
+
+
+154 top layers will be unfrozen.
+
+
+![unfrozen count](https://user-images.githubusercontent.com/44292203/118892627-7b51db00-b901-11eb-908e-16ad0fdd52df.PNG)
+
+
+I began training the model. This is the value of validation loss and validation accuracyat the beginning.
+
+
+![first epochs](https://user-images.githubusercontent.com/44292203/118892720-9cb2c700-b901-11eb-980d-84ecae3877f9.PNG)
+
+
+Now, the last 5 epochs for training.
+
+
+![last 5 for tra](https://user-images.githubusercontent.com/44292203/118892744-a5a39880-b901-11eb-8d36-b1446738860e.PNG)
+
+
+And the last 5 epochs for tuning.
+
+
+![last 5 for tun](https://user-images.githubusercontent.com/44292203/118892773-b05e2d80-b901-11eb-818c-58a777d16fda.PNG)
+
+
+Accuracy and loss figures.
+
+
+![acc fig](https://user-images.githubusercontent.com/44292203/118892805-b9e79580-b901-11eb-971e-2575a1e21f96.PNG)
+
+
+![57-74](https://user-images.githubusercontent.com/44292203/118892813-be13b300-b901-11eb-8b78-8bad1e11b3ec.PNG)
+
+
+It seems like I got the lowest validation loss in 57. epoch. Let use build a new model with 57 epochs and compare them. But first, the results of the model with 100 epochs.
+
+
+![conf mat](https://user-images.githubusercontent.com/44292203/118892860-d71c6400-b901-11eb-9002-d7c22772ec6b.PNG)
+
+
+Prediction of dandelion is very good at this model, but the prediction of daisy is not good enough again.
+
+
+![total test and acc](https://user-images.githubusercontent.com/44292203/118892884-e26f8f80-b901-11eb-8058-bd1b57279d32.PNG)
+
+
+**Accuracy is the best so far when I compare with other models, but the loss is very bad. I will build another model with the same architecture and see if I can decrease it or not. First, the last epochs of the new model.**
+
+
+![last epochs for tuning](https://user-images.githubusercontent.com/44292203/118892947-f74c2300-b901-11eb-9770-f045992dfe0c.PNG)
+
+
+Now, the loss figure.
+
+
+![loss fig](https://user-images.githubusercontent.com/44292203/118892999-0c28b680-b902-11eb-95b7-2ce824f07138.PNG)
+
+
+And now the results. This is the confusion matrix.
+
+
+![conf matr](https://user-images.githubusercontent.com/44292203/118893029-15b21e80-b902-11eb-9c0a-fd8c18c8e3c3.PNG)
+
+
+And now, total loss and accuracy for testing.
+
+
+![total test and acc](https://user-images.githubusercontent.com/44292203/118893062-22cf0d80-b902-11eb-9b51-0f6440eaf2cf.PNG)
+
+
+So, I managed to decrease the loss by almost %30. There is not a big loss for accuracy. So, I managed to improve my model.
+
+# Result Analysis and Summary
+
+
