@@ -8,7 +8,7 @@
 
 * I will use 3 different deep learning models. VGG16, MobileNetV2 and ResNet50.
 * The optimization algorithm will be ADAM as I got the best results from the last project which I did for binary classification.
-* At first, Input shape equals to (224, 224, 3). With GlobalAveragePooling2D module, the shape will become 2D. At the binary classification, we used Flatten to get 224*224*3 = 150528 neurons for input layers.
+* At first, Input shape equals to (224, 224, 3). With GlobalAveragePooling2D module, the shape will become 2D. At the binary classification, we used Flatten to get 224 * 224 * 3 = 150528 neurons for input layers.
 * We will use 512 neurons for hidden layers to train a deep learning model with theirsactivation function equals to relu.
 * And we have 5 neurons for output layer which equals to class numbers. Activation function of output layers’ is softmax.
 * Also, the difference between binary and categorical classification is class_type equals to categorical and we are using loss function as categorical_crossentropy.
