@@ -1,21 +1,23 @@
-# This is the second deep learning project. This time, I will classify 5 different flowers.
+## This is the second deep learning project. 
 
-  I will train a model with total 100 epochs first. (50 for training-50 for tuning) Then, I  will observe the plot figure of validation loss and try to decide for the optimum epoch value to prevent overfitting problem. Finally, I will evaluate the results that I gained and decide which one is better.
+This time, I will classify 5 different flowers.
+
+I will train a model with a total 100 epochs first. (50 for training, 50 for tuning). Then, I will observe the plot figure of the validation loss and try to decide the optimum epoch value to prevent overfitting problems. Finally, I will evaluate the results that I gained and decide which one is better.
+
+The tools that will be used during this project are Anaconda to create an environment, Jupyter and Spyder to code, and some libraries such as TensorFlow, Keras, Matplotlib, Seaborn, Pandas, Numpy, and Sklearn.
   
-  The tools will be used during this project are Anaconda to create environment, jupyter and spyder to code, some libraries such as TensorFlow, Keras, Matplotlib, Seaborn, Pandas, Numpy, Sklearn.
-  
-# Differences Between Binary Classification Project and Categorical Classification Project:
+## Differences Between Binary Classification Project and Categorical Classification Project:
 
-* I will use 3 different deep learning models. VGG16, MobileNetV2 and ResNet50.
-* The optimization algorithm will be ADAM as I got the best results from the last project which I did for binary classification.
-* At first, Input shape equals to (224, 224, 3). With GlobalAveragePooling2D module, the shape will become 2D. At the binary classification, we used Flatten to get 224 * 224 * 3 = 150528 neurons for input layers.
-* We will use 512 neurons for hidden layers to train a deep learning model with theirs activation function equals to relu.
-* And we have 5 neurons for output layer which equals to class numbers. Activation function of output layers’ is softmax.
-* Also, the difference between binary and categorical classification is class_type equals to categorical and we are using loss function as categorical_crossentropy.
+* I will use 3 different deep learning models. VGG16, MobileNetV2, and ResNet50.
+* The optimization algorithm will be ADAM, as I got the best results from the last project, which I did for binary classification.
+* At first, input shape equals (224, 224, 3). With the GlobalAveragePooling2D module, the shape will become 2D. At the binary classification, we used Flatten to get 224 * 224 * 3 = 150528 neurons for input layers.
+* We will use 512 neurons for hidden layers to train a deep learning model with their activation function equal to relu.
+* And we have 5 neurons for the output layer, which equals to class numbers. The activation function of output layers’ is softmax.
+* Also, the difference between binary and categorical classification is that class_type equals to categorical, and we are using the loss function as categorical_crossentropy.
 
-# Characteristics of the data
+## Characteristics of the data
 
-  There are 600 images for each class. Total size is 150 MB. Images are colourful images which all are representing RGB. There is total 1200 images for training (240 for each class). Also, there are 800 images for test and validation both (180 for each class).
+  There are 600 images for each class. Total size is 150 MB. Images are colorful images, which all are representing RGB. There are a total of 1200 images for training (240 for each class). Also, there are 800 images for testing and validation both (180 for each class).
   
 
 ![Resim6](https://user-images.githubusercontent.com/44292203/118888863-88200000-b8fc-11eb-8052-22726ef31f3c.png)
@@ -63,7 +65,7 @@ I have 5 different classes of flowers. These are:
 ```python
 -conda activate tf-gpu
 ```
-Setting the parameters. Class number will be changed due to number of classes in printClasses function.
+Setting the parameters. Class number will be changed due to the number of classes in the printClasses function.
 ```
 CLASS_MODE = 'categorical'
 LOSS_TYPE ='categorical_crossentropy'    
@@ -76,7 +78,7 @@ TRAINING_EPOCHS = 50
 TUNNING_EPOCHS = 50
 ACC = VAL_ACC = LOSS = VAL_LOSS = None
 ```
-Optimizitaion function will be the same that I got the best result in the first project.
+The optimization function will be the same that I got the best result in the first project.
 
 ```python
 model.compile(loss=LOSS_TYPE,
@@ -101,7 +103,7 @@ I run the code.
 
 # Results for VGG16 Model
   
-The model training has begun. This is the result of first epoch. Validation loss and accuracy is very low at the beginning.
+The model training has begun. This is the result of the first epoch. Validation loss and accuracy are very low at the beginning.
 
 
 ![first epoch](https://user-images.githubusercontent.com/44292203/118889703-c79b1c00-b8fd-11eb-8510-d68c75a897be.PNG)
@@ -119,20 +121,20 @@ Last 5 epochs for tuning.
 ![last 5 epochs for tuning](https://user-images.githubusercontent.com/44292203/118889760-de417300-b8fd-11eb-903e-a220a64172a7.PNG)
 
 
-As can be seen, validation accuracy has increased to almost 0.86 from 0.24. There is accuracy figure.
+As can be seen, validation accuracy has increased to almost 0.86 from 0.24. There is an accuracy figure.
 
 
 ![acc figure](https://user-images.githubusercontent.com/44292203/118889807-f0bbac80-b8fd-11eb-9abe-7fd2c273e2fd.PNG)
 
 
-And the loss figure. Validation loss is changing so much but I got the lowest value of validation loss in the 86. epoch. So, I will rerun the code and see if we improve our model or not.
+And the loss figure. Validation loss is changing so much, but I got the lowest value of validation loss in the 86. epoch. So, I will rerun the code and see if we improve our model or not.
 
 
 ![loss figure](https://user-images.githubusercontent.com/44292203/118889872-11840200-b8fe-11eb-94c1-91d559c76d8e.PNG)
 
 
 
-And these are the results of testing. First Confusion Matrix. As can be seen, there are some mistakes. For example, 18 daisies are predicted as dandelion and 10 sunflowers are predicted as dandelion. We have total 112 mistakes from 900 images of data.
+And these are the results of testing. First Confusion Matrix. As can be seen, there are some mistakes. For example, 18 daisies are predicted as dandelion and 10 sunflowers are predicted as dandelion. We have a total 112 mistakes from 900 images of data.
 
 
 ![conf matrix](https://user-images.githubusercontent.com/44292203/118889905-1cd72d80-b8fe-11eb-82dc-860c6bb43c09.PNG)
@@ -144,7 +146,7 @@ And let us see the accuracy and loss for testing.
 ![total loss and acc](https://user-images.githubusercontent.com/44292203/118889936-2b254980-b8fe-11eb-8d99-6a2dea970165.PNG)
 
 
-**So, the accuracy is 0.87. It is not that bad for multiclass classification. But the loss is a bit much. Let us try if we can decrease the loss and improve the model for better classification. First, last epochs of rerun model.**
+**So, the accuracy is 0.87. It is not that bad for multiclass classification. But the loss is a bit much. Let us try if we can decrease the loss and improve the model for better classification. First, last epochs of the rerun model.**
 
 
 ![last 5 epochs](https://user-images.githubusercontent.com/44292203/118889979-3a0bfc00-b8fe-11eb-93f6-532886478063.PNG)
@@ -164,7 +166,7 @@ Running the testing code.
 ```
 
 
-So, let us check the results. First, the confusion matrix. 16 tulips are predicted as rose and 13 dandelions are predicted as daisies. Accuracy of daisy is very bad when we compare with the others.
+So, let us check the results. First, the confusion matrix. 16 tulips are predicted as roses, and 13 dandelions are predicted as daisies. The accuracy of Daisy is very bad when we compare it with the others.
 
 
 ![conf mat](https://user-images.githubusercontent.com/44292203/118890055-5314ad00-b8fe-11eb-9485-4fb23711e5f5.PNG)
@@ -176,11 +178,11 @@ Finally, total loss and total accuracy for testing.
 ![total acc and loss](https://user-images.githubusercontent.com/44292203/118890103-66c01380-b8fe-11eb-91dc-ed736e6c7824.PNG)
 
 
-**So, the accuracy decreased a bit, but it is not necessary. Difference is not significantly for accuracy. But when we check the loss, the loss improved with decreasing by almost %16.**
+**So, the accuracy decreased a bit, but it is not necessary. The difference is not significant for accuracy. But when we check the loss, the loss improved with decreasing by almost %16.**
 
 # Results for MobileNetV2 Model
 
-Now, I have changed the model function to use MobileNetV2 architecture and count of top layers to be unfrozen. Comparing with VGG16 model, this model took less time.
+Now, I have changed the model function to use MobileNetV2 architecture and count of top layers to be unfrozen. Comparing with the VGG16 model, this model took less time.
 
 
 ![model](https://user-images.githubusercontent.com/44292203/118891847-44c79080-b900-11eb-9d1e-49a932bfdaef.PNG)
@@ -219,7 +221,7 @@ Accuracy and loss figures.
 ![loss figure](https://user-images.githubusercontent.com/44292203/118892072-9f60ec80-b900-11eb-9cf0-c77af34b2168.PNG)
 
 
-I see the lowest epoch at 72. epoch. But after I rerun the model with 72 epochs, I got worse result than I got at the beginning. I rerun the model with at least 6 different epoch numbers, and I got the best result with 69 epochs. But the result is not good enough. These are the confusion matrix and total accuracy and loss for testing.
+I see the lowest epoch at 72. epoch. But after I rerun the model with 72 epochs, I got a worse result than I got at the beginning. I rerun the model with at least 6 different epoch numbers, and I got the best result with 69 epochs. But the result is not good enough. These are the confusion matrix and total accuracy and loss for testing.
 
 
 ![conf mat](https://user-images.githubusercontent.com/44292203/118892135-bb648e00-b900-11eb-9dac-ebf805c65b73.PNG)
@@ -231,7 +233,7 @@ Prediction for rose and daisy is not good enough. Machine predicted 24 roses as 
 ![total test](https://user-images.githubusercontent.com/44292203/118892173-c9b2aa00-b900-11eb-8d7d-538a4a8a2dba.PNG)
 
 
-**I got the accuracy as 0.86 and loss as 0.45. Comparing with VGG16, accuracy decreased a little, but I have a good improvement for loss. Let us compare the results with 69 epochs model. First, last 5 epochs for tuning.**
+**I got the accuracy as 0.86 and the loss as 0.45. Comparing with VGG16, accuracy decreased a little, but I have a good improvement for loss. Let us compare the results with the 69 epoch model. First, last 5 epochs for tuning.**
 
 
 ![last 5 for tuning](https://user-images.githubusercontent.com/44292203/118892237-dfc06a80-b900-11eb-9583-d6f34d2719a5.PNG)
@@ -249,7 +251,7 @@ Now confusion matrix and total accuracy and total loss for testing.
 ![conf](https://user-images.githubusercontent.com/44292203/118892278-f1a20d80-b900-11eb-9fdb-b46c11870a2c.PNG)
 
 
-Prediction of tulip has been improved but prediction daisy is still bad. Prediction of dandelion has decreased a little and prediction of rose and sunflower has increased.
+Prediction of tulip has been improved, but prediction of daisy is still bad. Prediction of dandelion has decreased a little, and prediction of rose and sunflower has increased.
 
 
 ![total](https://user-images.githubusercontent.com/44292203/118892286-f49cfe00-b900-11eb-8eb0-f9f498c25d15.PNG)
@@ -258,9 +260,9 @@ Prediction of tulip has been improved but prediction daisy is still bad. Predict
 **Accuracy has decreased a little, but the loss has improved as about %5. This is what I could get the most improvement.**
 
 
-# Results for ResNet50 Model
+# Results for the ResNet50 Model
 
-I have changed the model function in the code and number of top layers to be unfrozen.
+I have changed the model function in the code and the number of top layers to be unfrozen.
 
 
 ![new model func](https://user-images.githubusercontent.com/44292203/118892619-7856ea80-b901-11eb-935b-e86aa9c7695f.PNG)
@@ -299,13 +301,13 @@ Accuracy and loss figures.
 ![57-74](https://user-images.githubusercontent.com/44292203/118892813-be13b300-b901-11eb-8b78-8bad1e11b3ec.PNG)
 
 
-It seems like I got the lowest validation loss in 57. epoch. Let use build a new model with 57 epochs and compare them. But first, the results of the model with 100 epochs.
+It seems like I got the lowest validation loss in 57. epoch. Let us use build a new model with 57 epochs and compare them. But first, the results of the model with 100 epochs.
 
 
 ![conf mat](https://user-images.githubusercontent.com/44292203/118892860-d71c6400-b901-11eb-9002-d7c22772ec6b.PNG)
 
 
-Prediction of dandelion is very good at this model, but the prediction of daisy is not good enough again.
+The prediction of dandelion is very good at this model, but the prediction of daisy is not good enough again.
 
 
 ![total test and acc](https://user-images.githubusercontent.com/44292203/118892884-e26f8f80-b901-11eb-8058-bd1b57279d32.PNG)
@@ -335,11 +337,11 @@ And now, total loss and accuracy for testing.
 ![total test and acc](https://user-images.githubusercontent.com/44292203/118893062-22cf0d80-b902-11eb-9b51-0f6440eaf2cf.PNG)
 
 
-**So, I managed to decrease the loss by almost %30. There is not a big loss for accuracy. So, I managed to improve my model.**
+**So I managed to decrease the loss by almost %30. There is not a big loss for accuracy. So, I managed to improve my model.**
 
 # Result Analysis and Summary
 
-I have 3 different architectures and 6 different model with Adam optimizer and different epoch numbers.
+I have 3 different architectures and 6 different models with Adam optimizer and different epoch numbers.
 
 
 1-) VGG16 Model with 100 epochs approximately:
@@ -377,7 +379,7 @@ I have 3 different architectures and 6 different model with Adam optimizer and d
 * Accuracy: 0.86
 * Loss: 0.43
 
-**So, the most effective model from these 3 different architectures and 6 different models is using ResNet50 Model with 57 epochs. I did not get the highest accuracy in this model but comparing with others, the difference is not significantly but the difference between losses is very significantly. MobileNetV2 model with 69 epochs actually very close to ResNet50 Model with 57 epochs but accuracy is distinctions between the two models. This is what I can do best with my GPU.**
+**So, the most effective model from these 3 different architectures and 6 different models is using the ResNet50 Model with 57 epochs. I did not get the highest accuracy in this model, but comparing with others, the difference is not significant, but the difference between losses is very significant. MobileNetV2 model with 69 epoch is actually very close to ResNet50 model with 57 epoch, but accuracy is a distinction between the two models. This is what I can do best with my GPU.**
 
 
 ## To see the .h5 models that I've built and images that I've used
